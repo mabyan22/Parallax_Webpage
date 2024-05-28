@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spaceship Parallax</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="parallax">
+        <div class="stars"></div>
+        <div class="text">
+          <h1>Extra-Terrestrial Journey: Scroll to go!</h1>
+        </div>
+        <div class="earth"></div>
+        <div class="spaceship"></div>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const earth = document.querySelector('.earth');
+            const spaceship = document.querySelector('.spaceship');
+            earth.style.transform = `translateX(-${window.scrollY * 0.5}px) `;
+            spaceship.style.transform = `translateX(${window.scrollY}px) `;
+        });
+    </script>
+</body>
+
+</html>
